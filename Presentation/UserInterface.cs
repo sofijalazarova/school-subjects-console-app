@@ -86,7 +86,7 @@ public class UserInterface
         else
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Invalid number for weekly classes.");
+            Console.WriteLine("Invalid number for weekly classes.");
         }
         Console.ResetColor();
     }
@@ -100,7 +100,7 @@ public class UserInterface
             if (subject == null)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("❗ Subject not found.");
+                Console.WriteLine("Subject not found.");
                 Console.ResetColor();
                 return;
             }
@@ -127,7 +127,7 @@ public class UserInterface
         else
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Invalid ID input.");
+            Console.WriteLine("Invalid ID input.");
         }
         Console.ResetColor();
     }
@@ -138,7 +138,7 @@ public class UserInterface
         if (!int.TryParse(Console.ReadLine(), out int subjectId))
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Invalid subject ID.");
+            Console.WriteLine("Invalid subject ID.");
             Console.ResetColor();
             return;
         }
@@ -147,7 +147,7 @@ public class UserInterface
         if (subject == null)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Subject not found.");
+            Console.WriteLine("Subject not found.");
             Console.ResetColor();
             return;
         }
@@ -162,7 +162,7 @@ public class UserInterface
         if (!int.TryParse(Console.ReadLine(), out int releaseYear))
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Invalid year.");
+            Console.WriteLine("Invalid year.");
             Console.ResetColor();
             return;
         }
@@ -192,7 +192,7 @@ public class UserInterface
         if (subject == null)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Subject not found.");
+            Console.WriteLine("Subject not found.");
             Console.ResetColor();
             return;
         }
@@ -220,7 +220,7 @@ public class UserInterface
         if (selectedBook == null)
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("❗ Book not found.");
+            Console.WriteLine("Book not found.");
             Console.ResetColor();
             return;
         }

@@ -9,14 +9,20 @@ public class OllamaService
     public OllamaService()
     {
         _client = new HttpClient();
-        _client.BaseAddress = new Uri("http://localhost:11434");
+
+        string protocol = Environment.GetEnvironmentVariable("OLLAMA_PROTOCOL");
+        string host = Environment.GetEnvironmentVariable("OLLAMA_HOST");
+        string port = Environment.GetEnvironmentVariable("OLLAMA_PORT");
+
+        _client.BaseAddress = new Uri($"{protocol}://{host}:{port}");
     }
 
     public async Task<string> SummarizeAsync(string content)
     {
+        string model = Environment.GetEnvironmentVariable("OLLAMA_MODEL");
         var requestBody = new
         {
-            model = "llama3.2:1b",
+            model = $"{model}",
             prompt = $"Summarize the following text:\n\n{content}",
             stream = false
         };
