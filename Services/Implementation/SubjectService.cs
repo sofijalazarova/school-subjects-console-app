@@ -14,7 +14,7 @@ public class SubjectService(ISubjectRepository repository) : ISubjectService
 
     public void AddSubject(Subject subject)
     {
-        _repository.AddSubject(subject);
+         _repository.AddSubject(subject);
     }
 
     public List<Literature> GetLiteratureBySubjectId(int subjectId)
@@ -22,17 +22,13 @@ public class SubjectService(ISubjectRepository repository) : ISubjectService
         return _repository.GetLiteratureBySubjectId(subjectId);
     }
 
-    public void ShowSubjects()
-    {
-        var subjects = _repository.GetAllSubjects();
-        foreach (var s in subjects)
-        {
-            Console.WriteLine($"{s.Id}. {s.Name}");
-        }
-    }
-
     public void UpdateSubject(Subject subject)
     {
         _repository.UpdateSubject(subject);
+    }
+
+    public void AddLiterature(Literature literature)
+    {
+        _repository.AddLiterature(literature);
     }
 }

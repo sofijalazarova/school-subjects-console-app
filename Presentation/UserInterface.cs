@@ -28,6 +28,7 @@ public class UserInterface
             Console.WriteLine("0. Exit");
             Console.WriteLine("-1. Add a new subject");
             Console.WriteLine("-2. Update an existing subject");
+            Console.WriteLine("-3. Add literature to an existing subject");
             Console.Write("\nEnter subject number to view details or choose some of the options: ");
 
             if (!int.TryParse(Console.ReadLine(), out int choice)) continue;
@@ -46,6 +47,10 @@ public class UserInterface
 
                 case -2:
                     UpdateSubject(subjects);
+                    break;
+
+                case -3:
+                    AddLiteratureToSubject(subjects);
                     break;
 
                 default:
@@ -76,6 +81,7 @@ public class UserInterface
             _service.AddSubject(newSubject);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n✅ Subject added successfully!");
+
         }
         else
         {
@@ -125,6 +131,60 @@ public class UserInterface
         }
         Console.ResetColor();
     }
+
+    private void AddLiteratureToSubject(List<Subject> subjects)
+    {
+        Console.Write("\nEnter the ID of the subject to add literature to: ");
+        if (!int.TryParse(Console.ReadLine(), out int subjectId))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("❗ Invalid subject ID.");
+            Console.ResetColor();
+            return;
+        }
+
+        var subject = subjects.FirstOrDefault(s => s.Id == subjectId);
+        if (subject == null)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("❗ Subject not found.");
+            Console.ResetColor();
+            return;
+        }
+
+        Console.Write("Enter title: ");
+        string? title = Console.ReadLine();
+
+        Console.Write("Enter author: ");
+        string? author = Console.ReadLine();
+
+        Console.Write("Enter release year: ");
+        if (!int.TryParse(Console.ReadLine(), out int releaseYear))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("❗ Invalid year.");
+            Console.ResetColor();
+            return;
+        }
+
+        Console.Write("Enter content: ");
+        string? content = Console.ReadLine();
+
+        var literature = new Literature
+        {
+            SubjectId = subjectId,
+            Title = title,
+            Author = author,
+            ReleaseYear = releaseYear,
+            Content = content
+        };
+
+        _service.AddLiterature(literature);
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n✅ Literature added successfully!");
+        Console.ResetColor();
+    }
+
 
     private async Task ViewSubjectDetailsAsync(int subjectId, List<Subject> subjects)
     {

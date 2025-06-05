@@ -2,10 +2,14 @@ using Npgsql;
 
 public class Database
 {
-    private const string ConnectionString = "Host=localhost;Port=5432;Username=postgres;Password=sofija18;Database=schoolsystemDb";
-
+    
+    static Database()
+    {
+        DotNetEnv.Env.Load();
+    }
     public static NpgsqlConnection GetConnection()
     {
+        string ConnectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING");
         return new NpgsqlConnection(ConnectionString);
     }
 

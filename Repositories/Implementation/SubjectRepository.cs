@@ -45,9 +45,9 @@ public class SubjectRepository : ISubjectRepository
                 Id = reader.GetInt32(0),
                 SubjectId = reader.GetInt32(1),
                 Title = reader.GetString(2),
-                Content = reader.GetString(3),
-                Author = reader.GetString(4),
-                ReleaseYear = reader.GetInt16(5)
+                Author = reader.GetString(3),
+                ReleaseYear = reader.GetInt16(4),
+                Content = reader.GetString(5),              
             });
         }
 

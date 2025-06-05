@@ -18,3 +18,9 @@
 /home/sofija/Code/SchoolSubjectsSystem/obj/Debug/net8.0/SchoolSubjectsSystem.genruntimeconfig.cache
 /home/sofija/Code/SchoolSubjectsSystem/obj/Debug/net8.0/ref/SchoolSubjectsSystem.dll
 /home/sofija/Code/SchoolSubjectsSystem/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/sofija/Code/SchoolSubjectsSystem/obj/Debug/net8.0/SchoolSubjectsSystem.sourcelink.json
+/home/sofija/Code/SchoolSubjectsSystem/bin/Debug/net8.0/DotNetEnv.dll
+/home/sofija/Code/SchoolSubjectsSystem/bin/Debug/net8.0/Microsoft.Extensions.Configuration.dll
+/home/sofija/Code/SchoolSubjectsSystem/bin/Debug/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/home/sofija/Code/SchoolSubjectsSystem/bin/Debug/net8.0/Microsoft.Extensions.Primitives.dll
+/home/sofija/Code/SchoolSubjectsSystem/bin/Debug/net8.0/Sprache.dll
