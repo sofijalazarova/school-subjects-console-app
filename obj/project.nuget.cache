@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Vo3iAbEg/KLN9e+PpG5zxl6ai9nA9szF+qAQ/oDu4BVR0WHm4UziaUvfrB/mR9TxEqWIFESPv67o59MDk2HB3A==",
+  "success": true,
+  "projectFilePath": "/home/sofija/Code/SchoolSubjectsSystem/SchoolSubjectsSystem.csproj",
+  "expectedPackageFiles": [
+    "/home/sofija/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/home/sofija/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.2/microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "/home/sofija/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/home/sofija/.nuget/packages/npgsql/9.0.3/npgsql.9.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
