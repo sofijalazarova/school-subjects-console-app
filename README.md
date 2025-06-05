@@ -37,7 +37,27 @@ CREATE TABLE Literature (
 );
 
 ```
-### 4. Run the application
+### 4. Populate the Database with Sample Data
+```sql
+INSERT INTO public.subjects VALUES 
+  (1, 'Mathematics', 'Fundamentals of algebra, geometry, and calculus.', 4),
+  (2, 'Computer Science', 'Introduction to programming, algorithms, and data structures.', 3),
+  (3, 'Physics', 'Basic concepts of motion, force, and energy.', 3);
+
+INSERT INTO public.literature VALUES 
+  (1, 1, 'Basic Mathematics for Beginners', 'Emily Carter', 2018,
+   'Mathematics is the study of numbers, shapes, patterns, and logical reasoning. This book serves as a foundational guide for learners who are beginning their journey into math. It starts with basic arithmetic operations such as addition, subtraction, multiplication, and division, followed by an exploration of fractions, decimals, and percentages. Students will also be introduced to geometric concepts like points, lines, angles, triangles, and circles. Algebraic thinking is developed through simple equations and the use of variables. Data handling topics such as bar graphs, tables, and basic probability are included to enhance analytical skills. With clear explanations, step-by-step examples, and plenty of exercises, this book aims to build critical thinking and practical problem-solving abilities essential for academic and everyday life.'),
+  
+  (2, 2, 'Introduction to Programming with C#', 'Michael Varela', 2019,
+   'This book introduces the fundamental concepts of computer programming using the C# programming language. It is designed for beginners with little or no prior experience in coding. Topics include variables, data types, operators, conditional statements, loops, and arrays. Students will learn how to write clean, readable code and understand how a program executes step by step. The book also covers methods, object-oriented programming concepts such as classes, objects, inheritance, and encapsulation. Real-world examples and hands-on coding challenges are provided in each chapter to reinforce learning. The goal is to help readers develop a strong programming mindset and prepare them for advanced software development topics.'),
+  
+  (3, 3, 'Foundations of Physics: Motion and Energy', 'Dr. Laura Kim', 2017,
+   'Physics helps us understand how the universe works by exploring matter, energy, and the forces that interact with them. This book introduces students to fundamental physics concepts including motion, velocity, acceleration, and Newton’s laws of motion. It explains the relationship between force, mass, and acceleration, and introduces simple machines such as levers and pulleys. Energy topics include kinetic and potential energy, conservation of energy, and basic thermodynamics. Diagrams, real-world examples, and experiments help illustrate abstract concepts. Each chapter includes conceptual questions and problem-solving exercises to promote deep understanding. This book lays a strong foundation for students pursuing further studies in science and engineering.');
+```
+
+### 5. Run the application
 Run the app from the root directory using:
 ```bash
 dotnet run
+```
+
