@@ -53,7 +53,15 @@ INSERT INTO public.literature VALUES
   
   (3, 3, 'Foundations of Physics: Motion and Energy', 'Dr. Laura Kim', 2017,
    'Physics helps us understand how the universe works by exploring matter, energy, and the forces that interact with them. This book introduces students to fundamental physics concepts including motion, velocity, acceleration, and Newton’s laws of motion. It explains the relationship between force, mass, and acceleration, and introduces simple machines such as levers and pulleys. Energy topics include kinetic and potential energy, conservation of energy, and basic thermodynamics. Diagrams, real-world examples, and experiments help illustrate abstract concepts. Each chapter includes conceptual questions and problem-solving exercises to promote deep understanding. This book lays a strong foundation for students pursuing further studies in science and engineering.');
+
+
+-- Fix sequences for SERIAL columns
+SELECT setval(pg_get_serial_sequence('subjects', 'id'), (SELECT MAX(id) FROM subjects));
+SELECT setval(pg_get_serial_sequence('literature', 'id'), (SELECT MAX(id) FROM literature));
 ```
+
+
+
 ### 5. Text Summarization with Ollama
 This project includes a service that allows text summarization using a locally running Ollama LLM server.
 #### Prerequisites
