@@ -10,7 +10,7 @@ git clone https://github.com/sofijalazarova/school-subjects-console-app.git
 cd school-subjects-console-app
 ```
 ### 2. Configure the `.env` file
-In the root directory of the project, create a `.env` file with the following content:
+In the root directory of the project, create a `.env` file with the following content or make a copy of the .env.example file:
 ```env
 DB_CONNECTION_STRING=Host=localhost;Port=5432;Username=postgres;Password=YOUR_PASSWORD;Database=schoolsystemDb
 ```
